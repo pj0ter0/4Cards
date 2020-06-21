@@ -21,7 +21,6 @@
 body {
     height: 100vh;
     max-height: 100vh;
-    overflow: hidden;
 }
 
 html {
@@ -103,7 +102,8 @@ p {
 .card {
     background-color: #ffffff;
     border-radius: 5px;
-    max-width: 35rem;
+    width: 35rem;
+    min-width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -126,4 +126,106 @@ p {
 
 .card img {
     align-self: flex-end;
+}
+
+@media (max-width:1530px) {
+    .card {
+        margin: 5%;
+    }
+}
+
+@media (max-width:1260px) {
+    .wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title-description {
+        width: 70%;
+    }
+}
+
+@media (max-width:1170px) {
+    p {}
+
+    .cards {
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .card {
+        max-width: 50rem;
+    }
+
+    .supervisor {
+        grid-area: 1/1;
+        justify-self: center;
+    }
+
+    .calculator {
+        grid-area: 2/1;
+        justify-self: center;
+    }
+
+    .center-cards {
+        /* grid-area: 2/2; */
+        grid-row: 1/3;
+    }
+
+    .builder {
+        grid-area: 1/2;
+    }
+
+    .karma {
+        grid-area: 3/1;
+    }
+}
+
+@media (max-width:830px) {
+    .cards {
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .supervisor {
+        grid-area: 1/1;
+        justify-self: center;
+    }
+
+    .calculator {
+        grid-area: 2/1;
+        justify-self: center;
+    }
+
+    .center-cards {
+        grid-area: 3/1;
+        grid-row: 3/5;
+    }
+
+
+}
+
+@media (max-width:520px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .title-description {
+        font-size: 1.4rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
 }
